@@ -1,3 +1,0 @@
-#Trabajo Practico Algoritmos 3 BackEnd
-[![build](https://github.com/algo2-unsam/tp-holamundo-2022-2022-grupo-7/actions/workflows/build.yml/badge.svg)](https://github.com/algo2-unsam/tp-holamundo-2022-2022-grupo-7/actions/workflows/build.yml)
-[![codecov](https://codecov.io/gh/algo2-unsam/tp-holamundo-2022-2022-grupo-7/branch/main/graph/badge.svg?token=DMMf52zA7r)](https://codecov.io/gh/algo2-unsam/tp-holamundo-2022-2022-grupo-7)
