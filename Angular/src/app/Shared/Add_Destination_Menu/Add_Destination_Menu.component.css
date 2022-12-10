@@ -1,0 +1,37 @@
+@import url(../../../Shared/Botones.css);
+@import url(../../../Shared/Input.css);
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+
+.centerPosition {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cardAddDestination {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--colorPrincipal);
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: solid;
+    animation: fadeIn 1s;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.containerBotones{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}

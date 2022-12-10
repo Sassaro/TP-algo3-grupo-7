@@ -1,0 +1,27 @@
+<div class="containerDiaDeActividad">
+  <div class="dia">
+    Dia {{day}}
+    <div *ngIf=" router.url.includes('/editItinerary/')">
+      <fa-icon [icon]="faTrashCan" (click)="deleteActivityDay(activityDay)"></fa-icon>
+    </div>
+  </div>
+  <div class="actividadesEnElDia">
+    <div *ngFor="let actividad of activityDay.actividades">
+      <app-Card_Activity [Actividad] = "actividad"></app-Card_Activity>
+
+      <div *ngIf=" router.url.includes('/editItinerary/')">
+        <fa-icon data-testid="Icon" (click)="deleteActivity(actividad)"  [icon]="faTrashCan"></fa-icon>
+      </div>
+    </div> 
+
+    <a *ngIf="router.url.includes('/editItinerary/')" href="{{getUserId()}}/{{itinerary.id}}/{{day-1}}/activities">
+      <button class="boton">
+        +Actividad
+      </button>
+    </a>
+
+    <div data-testid="emptyActivityDay" class="actividadesEnElDia" *ngIf="activityDay.actividades.length == 0">
+       < SIN ACTIVIDAD >
+    </div>
+  </div>
+</div>

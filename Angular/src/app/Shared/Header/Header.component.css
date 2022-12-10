@@ -1,0 +1,69 @@
+@import url(../../../Shared/Botones.css);
+@import url(../../../Shared/Input.css);
+
+.header{
+
+    background-color: var(--colorAuxiliar4);
+    width: 100%;
+    justify-content: space-between;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+
+.links{
+    align-items: center;
+}
+
+.botonesLinks{
+
+    text-decoration: none;
+    text-align: center;
+    margin-right: 50px;
+    color: var(--colorAuxiliar);
+}
+
+.textoLinks{
+    font-size: 1rem;
+    font-family: var(--fuenteSecundaria);
+}
+
+.botonesLinks:hover{
+    text-decoration:underline;
+    color:var(--colorContraste);
+    transition:0.4s;
+}
+
+.header > div, header {             /*Todos los divs dentro del header van a ser flex*/
+    display: flex;
+}
+
+.containerHeaders > div{    /*Todos los divs dentro del container de van a ser flex*/
+    display: flex;
+}
+
+.containerHeaders > nav{    /*El buscador dentro del header debe ser del 100% de la pantalla*/
+    width: 100%;
+}
+
+@media (max-width: 748px){
+
+    .containerHeaders {
+        width: 100%;
+    }
+
+    .botonesLinks{
+        display: none;
+    }
+    
+    .links > i{
+        display: none;
+    }
+    
+    .buscador{
+        border-radius: 0px;
+    }
+    
+    .simboloBuscador{
+        border-radius: 0px;
+    }
+}

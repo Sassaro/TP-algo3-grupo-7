@@ -1,0 +1,12 @@
+.error{
+
+    color: red;
+    background-color: pink;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-color: brown;
+    font-family: var(--fuenteSecundaria);
+}

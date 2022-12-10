@@ -1,0 +1,155 @@
+@import url(../../../Styles.css);
+@import url(../../../Shared/Input.css);
+@import url(../../../Shared/Botones.css);
+@import url(../../../Shared/Containers.css);
+
+.containerNombre{
+
+    display: flex;
+    background-color: var(--colorAuxiliar);
+    font-size: min(6vh,6vw);
+    color: var(--colorPrincipal);
+    border-radius: 1rem 1rem 0 0;
+}
+
+.containerNombre > b , img{
+    margin-left: 10px;
+}
+
+.containerNombre > img{
+    margin: 5px 0 5px 10px;
+    height: 1.5em;
+    border-radius: 50%;
+}
+
+.containerPreferencias{
+    border-style: solid;
+    border-width: 2px 0 0 0;
+    width: 100%;
+    background-color: var(--colorAuxiliar3);
+}
+
+.botonera{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.subTitulo{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--colorAuxiliar4);
+    font-size: 1.2rem;
+}
+
+.selector-boton{
+    display: flex;
+    justify-content:space-between ;
+    margin-bottom: 0.5rem;
+}
+.inputAmigos{
+    width: 50%;   
+}
+.perfilAmigo{
+    width: 50%;
+    
+}
+.perfilAmigo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: min(5vh,5vw);
+}
+.perfilAmigo > b{
+    width: 70%;
+}
+.perfilAmigo > img{
+    margin: 5px 0 5px 10px;
+    height: 1em;
+    border-radius: 50%;
+}
+.descripcionAmigo{
+    box-sizing: border-box;
+    margin: 0 1rem;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.scrollAmigos{
+    overflow-y:auto;
+    height: 200px;
+}
+
+.containerHeaderSimple > div{
+    font-family: var(--fuentePrincipal);
+    box-sizing: border-box;
+    padding: 10px;
+    width: 80%;
+    
+}
+
+.containerHeaderSimple > h2{
+    font-family: var(--fuentePrincipal);
+    box-sizing: border-box;
+    padding: 10px;
+    width: 80%;
+    
+}
+
+.containerHeaderSimple > h1{
+    font-family: var(--fuentePrincipal);
+    box-sizing: border-box;
+    padding: 10px;
+    width: 80%;
+    
+}
+
+.containerHeaderSimple > app-User-Data{
+    font-family: var(--fuentePrincipal);
+    width: 80%;   
+}
+
+.containerHeaderSimple > app-Config_Demanding{
+    font-family: var(--fuentePrincipal);
+    width: 80%;   
+}
+
+.containerGrid{
+    background-color: var(--colorAuxiliar3);
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width:768px) {
+
+    .containerHeaderSimple > div{
+        width: 100%;
+    }
+
+    .containerHeaderSimple > app-User-Data {
+        width: 100%;
+    }
+
+    .containerHeaderSimple > h1{
+        width: 100%;
+    }
+
+    .containerHeaderSimple > h2{
+        width: 100%;
+    }
+}
+
+@media (max-width:400px) {
+
+    .subTitulo{
+        flex-direction: column;
+    }
+
+    .botonera{
+        flex-direction: column;
+    }
+
+    .botonPreferencia{
+        margin-top: 10px;
+    }
+}

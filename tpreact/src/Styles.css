@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
+
+:root{
+    /*Estas son algunas variables fijas, los colores y fuentes puede cambiar*/
+    --colorPrincipal: #6E85B7;
+    --colorSecundario: #B2C8DF;
+    --colorTercero: #C4D7E0;
+    --colorContraste: #9AD0EC;
+    --colorAuxiliar: black;
+    --colorAuxiliar2: #F0EBE3;
+    --colorAuxiliar3: white;
+    --colorAuxiliar4: #1572A1;
+    --colorEstrellas: blue;
+    --colorCuidado: darkred;
+    --fuenteTitulos:'Righteous', cursive;
+    --fuentePrincipal:'Oswald', sans-serif;
+    --fuenteSecundaria: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+  
+.contenidoPagina{
+    background-color: var(--colorPrincipal); 
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+.itemsContainer {
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 60px;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.deleteButton {
+    color: red;
+}
+
+.deleteButton:hover {
+    color: var(--colorCuidado)
+}
+
+li {
+    list-style-type: none;
+}
+
+.buttonContainer{
+    justify-content: space-around;
+}

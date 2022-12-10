@@ -1,0 +1,21 @@
+<div class="containerGrid">
+
+  <app-Input data-testid="name" [label]= "'Nombre:'" [(text)]="user.nombre"></app-Input>
+
+  <app-Input data-testid="username" [label]= "'Username:'" [(text)]="user.username" ></app-Input>
+
+  <app-Input data-testid="availabeDays" [label]= "'Dias Disponibles:'" [(text)]="user.diasParaViajar" ></app-Input>
+
+  <app-Input data-testid="surname" [label]= "'Apellido:'" [(text)]="user.apellido" ></app-Input>
+
+  <app-Input_Selector data-testid="country" [label]= "'Pais de Residencia:'" [optionList]="countries" [(text)]="user.paisDeResidencia" ></app-Input_Selector>
+
+  <li>
+    <label>Criterio (Actual: {{user.criterio.type}})</label>
+    <select [(ngModel)]="user.criterio" class="input inputPerfil InputSelector">
+      <option *ngFor="let criterio of criteria" [ngValue]="criterio">{{criterio.type}}</option>
+    </select>
+  </li>
+
+
+</div>

@@ -1,0 +1,31 @@
+<div class="navegacion">
+
+  <div *ngIf=" router.url.includes('/itinerary/')">
+    <div class="destino">
+      <fa-icon class="fa-map" [icon]="faMap"></fa-icon>
+      <b>{{itinerary.destino.pais.toUpperCase()}} - {{itinerary.destino.ciudad.toUpperCase()}}</b>
+    </div>
+  </div>
+
+  <div *ngIf=" router.url.includes('/editItinerary/')">
+    <select [(ngModel)]="itinerary.destino" class="input InputSelector">
+      <option *ngFor="let destination of destinationList" [ngValue]="destination">{{destination.pais}} - {{destination.ciudad}}</option>
+    </select>
+  </div>
+
+  <div class="descripcion">
+    <label class="dias">Dias <b>{{itinerary.cantidadDeDias()}}</b></label>
+    <label class="actividades"> Actividades <b>{{itinerary.actividadesEnElItinerario().length}}</b></label>
+  </div>
+  <div class="promedio">
+    <label>Promedio dia/act {{itinerary.duracionPromedioPorDia()}}'</label>
+  </div>
+  <div class="costo">
+    <label>{{itinerary.costoDelItinerario() | currency:'USD':'symbol'}}</label>
+  </div>
+  <div class="dificultad">
+    <label>Dificultad: <b>{{itinerary.dificultad().toUpperCase()}}</b></label>
+  </div>
+</div>
+
+

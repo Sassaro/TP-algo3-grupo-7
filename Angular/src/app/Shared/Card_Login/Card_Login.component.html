@@ -1,0 +1,24 @@
+
+ <div class="cardLogin">
+    
+    <app-Logo></app-Logo>
+
+    <div>
+      <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
+      <app-Input data-testid="inputUsername" class="textoLogin" [label]="'Usuario:'" [(text)]="login.userName"></app-Input>
+    </div>
+    <app-Validation_Field data-testId="errorCard" [object]="login" [field]="'userName'"></app-Validation_Field>
+    
+    <div>
+      <fa-icon [icon]="faKey"></fa-icon>
+      <app-Input data-testid="inputPassword" class="textoLogin" [label]="'Contraseña:'" [type]="'password'" [(text)]="login.password"></app-Input>
+    </div>
+    <app-Validation_Field data-testId="errorCard" [object]="login" [field]="'password'"></app-Validation_Field>
+    
+    <div>
+      <button data-testid="loginButton" (click)="tryToLogin()" type="button" class="boton botonIngresar">Ingresar</button>
+    </div>
+
+  </div>
+
+  <app-Error_Card [errorList]="errors"></app-Error_Card>

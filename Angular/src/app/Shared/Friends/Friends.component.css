@@ -1,0 +1,18 @@
+@import url(../../../Styles.css);
+@import url(../../../Shared/Input.css);
+@import url(../../../Shared/Botones.css);
+
+.inputAmigos{
+    width: 50%;   
+}
+
+.selectorBoton{
+    display: flex;
+    justify-content:space-between ;
+    margin-bottom: 0.5rem;
+}
+
+.scrollAmigos{
+    overflow-y:auto;
+    height: 200px;
+}

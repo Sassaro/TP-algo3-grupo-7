@@ -1,0 +1,15 @@
+<div class="puntuacion">
+
+  <div class="fullStars" *ngFor=" let i of starsToCreate">
+    <fa-icon [icon]="faStar"></fa-icon>
+  </div>
+
+  <div class="emptyStars" *ngFor=" let i of emptyStars" >
+    <fa-icon [icon]="faStarEmpty"></fa-icon>
+  </div>
+
+  <div>
+    <p data-testid="totalScore">{{score | number: '1.1-1'}}</p>
+  </div>
+  
+</div>

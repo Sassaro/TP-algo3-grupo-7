@@ -1,0 +1,25 @@
+.perfilAmigo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: min(5vh,5vw);
+}
+
+.perfilAmigo > b{
+    width: 70%;
+}
+
+.perfilAmigo > img{
+    margin: 5px 0 5px 10px;
+    height: 1em;
+    border-radius: 50%;
+}
+
+.descripcionAmigo{
+    box-sizing: border-box;
+    margin: 0 1rem;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}

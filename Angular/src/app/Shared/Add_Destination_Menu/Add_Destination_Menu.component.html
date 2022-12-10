@@ -1,0 +1,16 @@
+<div class="cardAddDestination centerPosition">
+
+  <h2 class="title">
+    Seleccione un destino
+  </h2>
+
+  <select class="input InputSelector"[(ngModel)]="selectedValue">
+    <option *ngFor="let destination of destinationList" [ngValue]="destination">{{destination.pais}} - {{destination.ciudad}}</option>
+  </select>
+  
+  <div class="containerBotones">
+    <button class="boton botonAceptar-Cancelar" (click)="accept()"><b>Aceptar</b></button>
+    <button class="boton botonAceptar-Cancelar botonSecundario" (click)="close()"><b>Cancelar</b></button>
+  </div>
+
+</div>

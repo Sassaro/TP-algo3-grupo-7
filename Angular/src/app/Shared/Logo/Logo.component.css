@@ -1,0 +1,7 @@
+.logo {
+    font-size: 55px;
+    text-align: center;
+    margin: 0 10px 0 10px;
+    font-family: var(--fuenteTitulos);
+    font-weight: bold;
+}

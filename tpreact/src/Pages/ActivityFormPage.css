@@ -1,0 +1,18 @@
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+.containerNewActivityMenu{
+    flex-direction: column;
+    padding: 0 20px 0 20px;
+    font-family: var(--fuenteSecundaria);
+    margin-bottom: 60px;
+    overflow-y: auto;
+}
+
+.centeredContainer{
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,16 @@
+.customIconButton{
+    color: var(--colorAuxiliar);
+    font-size: 2rem;
+}
+
+.deleteButton {
+    color: red;
+}
+
+.deleteButton:hover {
+    color: var(--colorCuidado)
+}
+
+.editButton {
+    color: greenyellow;
+}

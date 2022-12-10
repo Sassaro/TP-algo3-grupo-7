@@ -1,0 +1,10 @@
+@import url(../../../Styles.css);
+@import url(../../../Shared/Input.css);
+@import url(../../../Shared/Botones.css);
+@import url(../../../Shared/Containers.css);
+
+.containerGrid{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(375px,30%));
+}

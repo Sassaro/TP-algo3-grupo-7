@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
+
+
+:root{
+    /*Estas son algunas variables fijas, los colores y fuentes puede cambiar*/
+    --colorPrincipal: #6E85B7;
+    --colorSecundario: #B2C8DF;
+    --colorTercero: #C4D7E0;
+    --colorContraste: #9AD0EC;
+    --colorAuxiliar: black;
+    --colorAuxiliar2: #F0EBE3;
+    --colorAuxiliar3: white;
+    --colorAuxiliar4: #1572A1;
+    --colorEstrellas: blue;
+    --colorCuidado: darkred;
+    --fuenteTitulos:'Righteous', cursive;
+    --fuentePrincipal:'Oswald', sans-serif;
+    --fuenteSecundaria: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+  
+.containerHeaders{
+
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--colorTercero);
+    font-size: min(5vh, 5vw);           /*Agarra el que sea mas chico, el 5% del ancho o el 5% del alto de la pantalla*/
+    font-family: var(--fuentePrincipal);
+    width: 100%;
+    margin-top: auto;
+}
+
+.contenidoPagina{
+    display: flex; 
+    flex-direction: column;
+    height: 100%;
+}
+
+body {
+
+    background-color: var(--colorPrincipal);        /*Setea el color de fondo de la pagina*/
+    height: 100%;           /*Esto esta para definir el tamaño de la pantalla y no genere problemas */
+    margin: 0;
+    padding: 0;
+    
+}
+
+html {
+    height: 100%;           /*Esto esta para definir el tamaño de la pantalla y no genere problemas */
+    width: 100%;
+    font-size: 20px;        /*define el font size general, para otros tamaños, usar rem*/
+    margin: 0;
+}
+
+
+img{                        /*define que la imagen no puede ser mas grande que su container*/
+    max-width: 100%;
+}
+
+.oculto {
+    display: none;
+}
+
+.fa-location-dot{
+    color:var(--colorEstrellas);;
+}
+
+.fa-pen{            /*Define el color de la birome*/
+    color: var(--colorAuxiliar);
+}
+
+.fa-star{           /*Define el color de las estrellas*/
+    color: var(--colorEstrellas);
+}
+
+.fa-trash-can{
+    margin: 0 10px;
+    align-self: center;
+    font-size: 1.2rem;
+}
+.fa-trash-can:hover{
+    color: var(--colorCuidado);
+    font-size: 1.3rem;
+}
+
+h1{
+
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}

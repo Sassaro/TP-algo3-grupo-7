@@ -1,0 +1,10 @@
+<div class="containerHeaders">
+  <app-Header></app-Header>
+  <app-Result-Bar [cantidad]="itineraryList.length"></app-Result-Bar>
+</div>
+
+<section class="containerPagina containerGrid">
+  <div *ngFor="let itinerario of itineraryList">
+    <app-Card_Main [itinerario]="itinerario"></app-Card_Main>
+  </div>
+</section>

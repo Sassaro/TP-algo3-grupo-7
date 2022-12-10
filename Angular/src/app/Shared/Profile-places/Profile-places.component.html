@@ -1,0 +1,19 @@
+<div class="cardDestinos">
+
+  <div class="tituloCardDestino" *ngIf=" wanted ">
+    Destinos Deseados
+     <button  data-testid="addDestinationButton" class="botonAgregarDestino" (click)="showDestinationMenu()"><b>+ Destino</b></button>
+   </div>
+  <div class="tituloCardDestino" *ngIf=" !wanted ">Destinos Visitados</div>
+  <div class="menuDestinos">
+    <label class="tituloMenuDestinos">Destinos</label>
+    
+    <div *ngFor="let destination of destinationList">
+      <app-Profile-places-element [text]="destination.pais + '-' + destination.ciudad"></app-Profile-places-element>
+    </div>
+  
+  </div>
+
+</div>
+
+<app-Add_Destination_Menu data-testid="destinationMenu" [userDestinationList]="destinationList" *ngIf="isOn" (onClick)="isOn = $event"></app-Add_Destination_Menu>

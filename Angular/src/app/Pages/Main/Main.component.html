@@ -1,0 +1,11 @@
+<div class="containerHeaders">
+  <app-Header></app-Header>
+  <app-Search_Bar (search)="receiver($event)"></app-Search_Bar>
+  <app-Result-Bar [cantidad]="itineraryList.length"></app-Result-Bar>
+</div>
+
+<section class="containerPagina containerGrid">
+  <div *ngFor="let itinerario of itineraryList | filterItinerary: itinerarioBuscado">
+    <app-Card_Main [itinerario]="itinerario"></app-Card_Main>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+.error{
+    justify-content: center;
+    position: fixed;
+    color: red;
+    background-color: pink;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    border-style: solid;
+    border-color: brown;
+    font-family: var(--fuenteSecundaria);
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+}

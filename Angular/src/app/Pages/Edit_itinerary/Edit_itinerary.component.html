@@ -1,0 +1,22 @@
+<div class="containerHeaders">
+  <app-Header></app-Header>
+</div>
+
+<section *ngIf="itinerary" class="containerPagina navegacion-container">
+  <app-Navigation [itinerary]="itinerary"></app-Navigation>
+  <div *ngFor="let diaActividad of itinerary.diasDeActividad; let i = index">
+    <app-Container_Itinerary [activityDay] = "diaActividad" [day]="i + 1" [itinerary]="itinerary"></app-Container_Itinerary>
+  </div>
+  
+  <button class="boton botonAceptar-Cancelar" (click)="agregarDiaDeActividad()">
+    +dia
+  </button>
+
+  <div class="containerBotones">
+    <button class="boton botonAceptar-Cancelar" (click)="updateItineraryButton()"><b>Aceptar</b></button>
+    <button class="boton botonAceptar-Cancelar botonSecundario" (click)="getItinerary()"><b>Cancelar</b></button>
+  </div>
+
+</section>
+
+<app-Update_Card [isOn]="aux" [text]="'el itinerario'" ></app-Update_Card>

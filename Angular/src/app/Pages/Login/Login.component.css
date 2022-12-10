@@ -1,0 +1,7 @@
+@import url(../../../Shared/Containers.css);
+
+.containerCentrado{
+    margin: 0;
+    height: 100%;
+    align-items: center;
+}

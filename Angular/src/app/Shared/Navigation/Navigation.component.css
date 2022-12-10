@@ -1,0 +1,57 @@
+@import url(../../../Shared/Input.css);
+
+.navegacion {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--colorAuxiliar3);
+    padding: 0.5rem;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    border-color: var(--colorAuxiliar);
+    border-style: solid;
+    font-family: var(--fuentePrincipal);
+    margin: 0 0 2rem 0;
+}
+
+.fa-map{
+  margin: 0 10px 0 0;
+}
+
+@media (max-width: 400px) {
+
+.navegacion-container > div {
+    width: 100%;
+  }
+
+  .navegacion {
+    border-radius: 0px;
+    box-sizing: border-box;
+    width: 100%;
+    flex-direction: row;
+    margin: 0 0;
+    flex-wrap: wrap;
+
+  }
+
+  .d {
+    width: auto;
+  }
+
+  .descripcion {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+.costo-dificultad {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+  
+.promedio {
+    width: 100%;
+}
+}

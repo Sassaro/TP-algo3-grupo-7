@@ -1,0 +1,31 @@
+
+<div class="containerHeaders">
+  <app-Header></app-Header>
+</div>
+
+<section class="containerPagina containerEnColumna containerHeaderSimple">
+  <h1 class="titulo">
+    <b>¿Desea agregar un vehiculo a su viaje?</b>
+  </h1>
+
+  <app-Search_Bar (search)="receiver($event)"></app-Search_Bar>
+
+  <div class="contenidoVehiculos">
+
+    <div *ngFor="let vehiculo of vehicleList | filterVehicles: vehiculoBuscado">
+      <app-Card_Vehicles [vehiculo]="vehiculo"></app-Card_Vehicles>
+    </div>
+  </div>
+
+  <div class="resumen">
+    <p>Viaje:<b>$6000</b> + Vehiculo: <b>$8000</b> = <b>$14000</b></p>
+
+    <div class="botonera">
+      <button class="boton botonAceptar-Cancelar">Comprar</button>
+      <button class="boton botonAceptar-Cancelar botonSecundario">
+        Volver
+      </button>
+    </div>
+  </div>
+</section>
+

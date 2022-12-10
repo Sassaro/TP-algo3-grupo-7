@@ -1,0 +1,35 @@
+<li *ngIf="user" class="cardViaje">
+  <div>
+    <h2 data-testid="titleText" class="textoTitulo">
+      <fa-icon [icon]="faMap"></fa-icon>
+      {{ itinerario.destino.pais }} {{ itinerario.destino.ciudad }}
+      <a *ngIf="puedeEditar()" href="{{getUserId()}}/editItinerary/{{itinerario.id}}">
+        <fa-icon data-testid="editIcon" [icon]="faPen"></fa-icon>
+      </a>
+    </h2>
+
+    <app-Score [score]="itinerario.getAvgScore()" [starsToCreate]="itinerario.getScoreArray()" [emptyStars]="itinerario.getEmptyScoreArray()"></app-Score>
+    
+  </div>
+
+  <div class="containerDetalles">
+    <p data-testid="tripDuration">Viaje de {{ itinerario.cantidadDeDias() }} Dias</p>
+    <p data-testid="tripTotalActivities">
+      Actividades totales: {{ itinerario.actividadesEnElItinerario().length }}
+    </p>
+    <p data-testid="avgDayDuration">
+      Duracion Promedio por dia:
+      {{ itinerario.duracionPromedioPorDia() / 60 | number: '1.1-1'}} horas
+    </p>
+  </div>
+
+  <div class="containerCostoYBotonDetalle">
+    <div class="containerCosto">
+      <p data-testid="tripCost">Desde {{ itinerario.costoDelItinerario() }}$</p>
+      <p data-testid="tripDificulty">Dificultad {{ itinerario.dificultad() }}</p>
+    </div>
+    <a href="{{getUserId()}}/itinerary/{{itinerario.id}}">
+      <button type="button" class="boton botonDetalle">Ver detalles</button>
+    </a>
+  </div>
+</li>

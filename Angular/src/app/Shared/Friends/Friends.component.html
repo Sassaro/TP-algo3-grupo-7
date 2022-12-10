@@ -1,0 +1,18 @@
+<div class="cardAmigos">
+  <p>Posibles Amigos</p>
+  <div class="selectorBoton">
+    <select data-testid = "addFriendSelector" class="input inputAmigos inputPerfil" [(ngModel)]="selectedOption">
+      <option *ngFor="let friendToAdd of friendToAddList" [ngValue]="friendToAdd">{{friendToAdd.nombre}} - {{friendToAdd.apellido}}</option>
+    </select>
+    <button data-testid = "addFriendButton" class="boton" (click)="addSelectedFriend()"><b>Agregar</b></button>
+  </div>
+  <div class="scrollAmigos">
+    <div class="amigos">
+
+      <div *ngFor=" let friend of friendList">
+        <app-Friend_Profile [user]="friend"></app-Friend_Profile>
+      </div>
+    
+    </div>
+  </div>
+</div>

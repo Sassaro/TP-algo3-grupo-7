@@ -1,0 +1,14 @@
+@import url(../../../Shared/Botones.css);
+
+.botonPreferencia{
+    background-color: var(--colorAuxiliar4);
+    color: var(--colorAuxiliar3);
+    width: auto;
+    margin: 10px 10px 0 0 ;
+    font-weight: bold;
+}
+
+.botonPreferenciaOn{
+    color: var(--colorAuxiliar);
+    background-color: var(--colorTercero);
+}

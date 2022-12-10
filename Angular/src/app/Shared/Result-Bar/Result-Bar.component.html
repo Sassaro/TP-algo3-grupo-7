@@ -1,0 +1,14 @@
+<div class="BarraResultados">
+
+  <div *ngIf=" router.url.includes('/main')">
+    <p>Resultados de busqueda: {{ cantidad }}</p>
+  </div>
+  
+  <div *ngIf=" router.url.includes('/myItineraries')">
+    <div class="barraItinerariosResultados">
+      <b>Mis Itinerarios</b>
+      <b>Total: {{cantidad}} </b>
+    </div>
+  </div>
+
+</div>

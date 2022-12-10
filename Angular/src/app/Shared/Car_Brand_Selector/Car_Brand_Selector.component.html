@@ -1,0 +1,3 @@
+<select *ngIf="isOn" class="selectorMarca" [(ngModel)]="gustoSelectivo.marcaF">
+  <option *ngFor="let vehicle of vehicleList" [ngValue]="vehicle.marca" > {{vehicle.marca}} </option>
+</select>

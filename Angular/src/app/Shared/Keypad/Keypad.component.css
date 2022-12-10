@@ -1,0 +1,17 @@
+@import url(../../../Styles.css);
+@import url(../../../Shared/Botones.css);
+
+.containerBotones {
+    padding-top: 10px;
+    display: flex;
+    justify-content: right;
+    width: 80vw;
+}
+
+@media (max-width:667px) {
+
+    .containerBotones{
+        width: 100vw;
+        justify-content:space-around;
+    }
+}

@@ -1,0 +1,12 @@
+@import url(../../../Styles.css);
+@import url(../../../Shared/Input.css);
+@import url(../../../Shared/Botones.css);
+@import url(../../../Shared/Containers.css);
+
+.containerListaActividades {
+    width: 100%;
+    margin: 12rem 2rem;
+}
+
+
+

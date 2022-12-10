@@ -1,0 +1,27 @@
+<div class="cardAddDScore centerPosition">
+
+  <h2 class="title">
+    Seleccione la puntuacion
+  </h2>
+
+  <select class="input InputSelector"[(ngModel)]="selectedValue">
+    <option> 1 </option>
+    <option> 2 </option>
+    <option> 3 </option>
+    <option> 4 </option>
+    <option> 5 </option>
+    <option> 6 </option>
+    <option> 7 </option>
+    <option> 8 </option>
+    <option> 9 </option>
+    <option> 10 </option>
+  </select>
+  
+  <div class="containerBotones">
+    <button class="boton botonAceptar-Cancelar" (click)="accept()"><b>Aceptar</b></button>
+    <button class="boton botonAceptar-Cancelar botonSecundario" (click)="close()"><b>Cancelar</b></button>
+  </div>
+
+</div>
+
+<app-Error_Card [errorList]="errors" ></app-Error_Card>

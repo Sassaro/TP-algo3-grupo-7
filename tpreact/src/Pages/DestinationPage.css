@@ -1,0 +1,29 @@
+.HeaderContainer{
+    width: 100%;
+}
+.header{
+    width: 100%;
+    font-family: var(--fuenteTitulos);
+    color:var(--colorAuxiliar3);
+}
+
+.containerBusqueda{
+    justify-content: center;
+    height: 3rem;
+}
+
+.pagina{
+    background-color: var(--colorPrincipal); 
+    flex-direction: column;
+    min-height: 76vh;
+    min-width: 50vw;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+}
+
+.containerBoton{
+    background-color: var(--colorPrincipal);
+    border: 0;
+    justify-content: flex-end;
+}

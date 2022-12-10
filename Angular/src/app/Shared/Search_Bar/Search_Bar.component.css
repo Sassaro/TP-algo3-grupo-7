@@ -1,0 +1,46 @@
+@import url(../../../Shared/Input.css);
+
+.input{                 /*la barra de ingreso de usuario y contraseña*/
+    
+    border-radius: 0 10px 10px 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: var(--fuenteSecundaria);
+    font-size: 1rem;
+}
+
+.simbolo{               /*Simbolo a la izquierda de la barra de ingresar usuario, tiene que tener la imagen correspondiente*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 2px 0 2px 2px;
+    border-radius: 10px 0 0 10px;
+    border-style: solid;
+    border-color: var(--colorAuxiliar);
+    background-color: var(--colorTercero);
+    width: auto;
+    min-height: 100%;
+    min-width: 30px;
+    box-sizing: border-box;
+}
+
+.buscador{
+    width: 60%;
+    border-radius:  10px 0 0 10px;
+}
+
+.simboloBuscador{          
+    min-height: 100%;
+    border-width: 2px 2px 2px 0px;
+    border-radius:  0px 10px 10px 0px;
+}
+
+@media (max-width: 748px){
+
+    .buscador {
+        width: 90%;
+    }
+
+    
+}

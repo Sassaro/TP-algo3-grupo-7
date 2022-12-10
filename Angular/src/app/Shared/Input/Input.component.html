@@ -1,0 +1,7 @@
+
+<form class="form">
+  <div class="form-group">
+      <input type= "{{type}}" id="name" class="form-input" placeholder=" " [(ngModel)]="text" (ngModelChange)="textChange.emit(text)" [ngModelOptions]="{standalone: true}">
+      <label for="name" class="form-label">{{ label }}</label>
+  </div>
+</form>

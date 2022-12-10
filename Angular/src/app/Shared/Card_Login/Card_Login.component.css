@@ -1,0 +1,85 @@
+@import url(../../../Styles.css);
+@import url(../../../Shared/Input.css);
+@import url(../../../Shared/Botones.css);
+@import url(../Input/Input.component.css);
+
+.cardLogin{
+    margin-top: 30vh;
+    display: grid;
+    min-width: 375px;
+    max-width: min-content;
+    max-height: min-content;
+    background-color: var(--colorContraste);
+    border-radius: 10px;
+    border-style: solid;
+    box-shadow: 0px 10px 30px 0px var(--colorAuxiliar);
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.cardLogin > div {
+    display: flex;
+    align-items: center;
+    margin: 0 10px 25px 10px;
+}
+
+.cardLogin > div > fa-icon {
+    position: relative;
+    top: 10px;
+}
+
+.cardLogin > div > app-Input {
+    width: 100%;
+}
+
+.textoLogin{
+    font-family: var(--fuenteSecundaria);
+    color: var(--colorAuxiliar);
+}
+
+.botonIngresar{
+    font-size: 1rem;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+a{
+    width: 100%;
+}
+
+@media (max-width:700px) {
+    .cardLogin{
+        margin-top: 0;
+    }
+}
+
+/*Clases cuando la pantalla es menor a 400px*/
+@media (max-width:400px) {
+    
+    .cardLogin{
+        height: 100%;
+        width: 100%;
+        border-radius: 0px;
+        border: 0;
+        grid-template-rows: 20% 5% 15% 5% 15%;
+        box-shadow: 0;
+    }
+
+    .logo{
+        font-size: min(15vh,15vw);  /*Tamanio de fuente mas grande*/
+    }
+
+    .botonPrincipal{        /*El boton se hace mas grande cuando se esta en modo celu*/
+        height: 10vh;
+    }
+
+    .boton{
+        font-size: min(7vh,7vw);
+    }
+
+    .textoLogin{
+        font-size: min(7vh,7vw);
+    }
+
+}

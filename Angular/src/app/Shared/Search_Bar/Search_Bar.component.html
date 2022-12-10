@@ -1,0 +1,6 @@
+<nav class="containerInput containerInputBuscador">
+  <input [(ngModel)] = "palabraBuscada"(input)="searchThis()" autocomplete="off" type="text" class="input buscador" placeholder="Buscar..." />
+  <button type="button" class="simbolo simboloBuscador">
+    <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
+  </button>
+</nav>

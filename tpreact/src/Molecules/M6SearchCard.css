@@ -1,0 +1,17 @@
+.containerSearchCard{
+    justify-content: center;
+}
+
+.searchCard{
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+#inputBuscador{
+    background-color: white;
+    border-radius: 5px 0 0 5px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px 0px 2px 2px;
+}

@@ -1,0 +1,9 @@
+.header {
+    background-color: var(--colorAuxiliar4);
+    height: 40px;
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+    font-style: bold;
+    padding-left: 20px;
+    align-items: center;
+}

@@ -1,0 +1,6 @@
+.elementoMenuDestinos{
+    justify-content: space-between;
+    border-width: 2px 0 0 0;
+    display: flex;
+    border-style: solid;
+}

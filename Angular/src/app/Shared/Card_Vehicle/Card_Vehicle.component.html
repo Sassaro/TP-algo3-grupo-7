@@ -1,0 +1,31 @@
+<li class="cardVehiculo">
+  <div class="simboloVehiculo">
+    <label>{{vehiculo.type}}</label>
+    <i class="fa-solid fa-car"></i>
+  </div>
+  <div class="descripcionVehiculo">
+    <label
+      >Marca: <b>{{ vehiculo.marca }}</b></label
+    >
+    <label data-testId="textConvenio" *ngIf="vehiculo.tieneConvenio" class="textoConvenio"
+      >Con convenio<i class="fa-solid fa-handshake-simple"></i>
+    </label>
+    <label
+      >Modelo: <b>{{ vehiculo.modelo }}</b></label
+    >
+    <label
+      >Año:<b>{{ vehiculo.anioDeFabricacion.getFullYear() }}</b></label
+    >
+  </div>
+  <div class="costoVehiculo">
+    <label
+      >Costo por Dia: <b>{{ vehiculo.costoDiario | currency }}</b></label
+    >
+    <label
+      >Costo Base: <b>{{ vehiculo.costoBase(2) | currency }}</b></label
+    >
+    <label class="costoTotal">{{
+      vehiculo.costoDeAlquiler(2) | currency
+    }}</label>
+  </div>
+</li>

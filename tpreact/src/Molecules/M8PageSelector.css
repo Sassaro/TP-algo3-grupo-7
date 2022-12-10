@@ -1,0 +1,21 @@
+.pageSelector {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--colorAuxiliar4);    
+    width: 100%;
+    padding: 5px 0 5px 0;
+    position: fixed;
+    bottom: 0;
+}
+
+.iconButton {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.iconButton:hover{
+    color: var(--colorAuxiliar2);
+    font-size: 2.5rem;
+    transition: 0.3s;
+}

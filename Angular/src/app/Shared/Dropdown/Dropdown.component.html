@@ -1,0 +1,14 @@
+<div class="dropdown">
+  <button class="dropbutton {{status()}}">
+    <fa-icon *ngIf="iconToShow" [icon]="iconToShow"></fa-icon>
+    {{text}}
+  </button>
+
+  <div class="dropdown-content">
+    <a href="{{getUserId()}}/main"> Home </a>
+    <a href="{{getUserId()}}/myItineraries"> Mis Itinerarios </a>
+    <a href="{{getUserId()}}/profile"> Perfil </a>
+    <a href="./index"> Cerrar Sesion </a>
+  </div>
+
+</div>

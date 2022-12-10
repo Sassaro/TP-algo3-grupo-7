@@ -1,0 +1,19 @@
+<div class="containerHeaders">
+  <app-Header></app-Header>
+</div>
+
+<section *ngIf="itinerary" class="containerPagina navegacion-container">
+  <app-Navigation [itinerary]="itinerary"></app-Navigation>
+  <div *ngFor="let diaActividad of itinerary.diasDeActividad; let i = index">
+    <app-Container_Itinerary [activityDay] = "diaActividad" [day]="i + 1" [itinerary]="itinerary"></app-Container_Itinerary>
+  </div>
+
+  <div class="footer-form">
+    <app-Score [score]="itinerary.getAvgScore()" [starsToCreate]="itinerary.getScoreArray()" [emptyStars]="itinerary.getEmptyScoreArray()"></app-Score>
+    <button data-testid="ScoreMenuButton" class="boton botonAceptar-Cancelar" (click)="showMenu()"><b>Puntuar</b></button>
+  </div>
+  
+</section>
+
+<app-Add_Score_Menu data-testid="addScoreMenu" [itinerario]="itinerary" *ngIf="isOn" (onClick)="isOn = $event"></app-Add_Score_Menu>
+

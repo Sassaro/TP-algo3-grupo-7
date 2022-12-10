@@ -1,0 +1,19 @@
+
+  <header class="header">
+    <app-Logo></app-Logo>
+    <div class="links">
+      <a class="botonesLinks" href="{{getUserId()}}/main">
+        <h2 class="textoLinks">Home</h2>
+      </a>
+      <a class="botonesLinks" href="{{getUserId()}}/myItineraries">
+        <h2 class="textoLinks">Mis Itinerarios</h2>
+      </a>
+      <a class="botonesLinks" href="{{getUserId()}}/profile">
+        <h2 class="textoLinks">Perfil</h2>
+      </a>
+      <a class="botonesLinks" href="./index">
+      <fa-icon [icon]="faDoorOpen"></fa-icon>
+      </a>
+      <app-Dropdown [hidden]="true" [iconToShow]="faBars"></app-Dropdown>
+    </div>
+  </header>

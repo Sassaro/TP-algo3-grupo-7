@@ -1,0 +1,24 @@
+.containerPagina{     /*Clase container general*/
+
+    margin-top: min(30%,27vh);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+    min-width: 375px;
+}
+
+.containerEnColumna{
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerGrid{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(375px,30%));
+}
+
+.containerHeaderSimple {
+    margin-top: min(12%,12vh);
+}

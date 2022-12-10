@@ -1,0 +1,14 @@
+@import url(../../../Styles.css);
+@import url(../../../Shared/Input.css);
+@import url(../../../Shared/Botones.css);
+@import url(../../../Shared/Containers.css);
+
+.navegacion-container {
+    flex-direction: column;
+    width: 70%;
+    margin: 5rem auto;
+    display: flex;
+}
+.footer-form{
+    display: flex;
+}

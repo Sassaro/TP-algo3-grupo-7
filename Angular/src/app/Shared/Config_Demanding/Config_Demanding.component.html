@@ -1,0 +1,15 @@
+<div class="cardConfig" *ngIf="isOn">
+  <label>Configuracion Criterio Exigente: </label>
+
+  <div class="inputsConfig">
+    <label>Dificultad: </label>
+    <select [(ngModel)]="userCriteria.dificultad">
+      <option>BAJA</option>
+      <option>MEDIA</option>
+      <option>ALTA</option>
+    </select>
+    <label> Porcentaje:  </label>
+    <input type="number" [(ngModel)]="userCriteria.porcentaje" >
+  </div>
+
+</div>

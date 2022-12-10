@@ -1,0 +1,12 @@
+<div class="containerHeaders">
+  <app-Header></app-Header>
+  <app-Search_Bar (search)="receiver($event)"></app-Search_Bar>
+</div>
+
+<section class="containerListaActividades">
+  
+    <div class="containerCardActivity" *ngFor="let actividad of activityList | filterActivity: actividadBuscada">
+      <app-Card_Activity [Actividad] = "actividad" [itinerary]="itinerary" [activityDay]="activityDay" ></app-Card_Activity>
+    </div>
+  
+</section>

@@ -1,0 +1,6 @@
+<li>
+  <label>{{label}}</label>
+  <select class="input inputPerfil" [(ngModel)]="text" (ngModelChange)="textChange.emit(text)" name="fieldName" ngDefaultControl >
+    <option *ngFor="let option of optionList">{{option}}</option>
+  </select>
+</li>

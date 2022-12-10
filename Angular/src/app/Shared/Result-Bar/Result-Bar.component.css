@@ -1,0 +1,15 @@
+.BarraResultados{
+    background-color: var(--colorAuxiliar2);
+    color: var(--colorPrincipal);
+    padding: 0 0 0 10px;
+    font-family: var(--fuenteSecundaria);
+}
+
+.barraItinerariosResultados{
+    padding: 1rem 0 1rem 0;
+    width: 100%;
+    font-size: min(3vh,3vw);
+    font-family: var(--fuentePrincipal);
+    display: flex;
+    justify-content:space-around;
+}

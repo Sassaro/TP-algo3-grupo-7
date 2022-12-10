@@ -1,0 +1,39 @@
+<article class="containerActividad" (click)="addActivity()">
+  <div class="nombreActividad">
+      <fa-icon class="fa-location-dot" [icon]="faLocationDot"></fa-icon>
+      {{Actividad.descripcion}}
+  </div>
+  <div class="actividadDetalles">
+    <p>
+      {{Actividad.inicio | date:'shortTime'}} - {{Actividad.fin | date:'shortTime'}}  /
+      <fa-icon class="fa-clock" [icon]="faClock"></fa-icon>
+      {{Actividad.duracionActividad()}} minutos
+    </p>
+
+    <div class="separador"></div>
+
+    <p> Dificultad: {{Actividad.dificultad.toUpperCase()}} </p>
+    
+    
+    <div *ngIf="Actividad.dificultad === dificultad.BAJA ">
+      <fa-icon class="fa-circle" [icon]="faCircle"></fa-icon>
+      <fa-icon class="fa-circle-regular" [icon]="faCircleRegular"></fa-icon>
+      <fa-icon class="fa-circle-regular" [icon]="faCircleRegular"></fa-icon>
+    </div>
+    <div *ngIf="Actividad.dificultad === dificultad.MEDIA ">
+      <fa-icon class="fa-circle" [icon]="faCircle"></fa-icon>
+      <fa-icon class="fa-circle" [icon]="faCircle"></fa-icon>
+      <fa-icon class="fa-circle-regular" [icon]="faCircleRegular"></fa-icon>
+    </div>
+    <div *ngIf="Actividad.dificultad === dificultad.ALTA ">
+      <fa-icon class="fa-circle" [icon]="faCircle"></fa-icon>
+      <fa-icon class="fa-circle" [icon]="faCircle"></fa-icon>
+      <fa-icon class="fa-circle" [icon]="faCircle"></fa-icon>
+    </div>
+
+    <div class="separador"></div>
+    <p>{{Actividad.costo | currency}}</p>
+  </div>
+</article>
+
+<app-Error_Card [errorList]="errors" ></app-Error_Card>

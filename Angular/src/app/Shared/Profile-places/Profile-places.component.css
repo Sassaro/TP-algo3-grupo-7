@@ -1,0 +1,39 @@
+.cardDestinos{
+    flex-direction: column;
+    display: flex;
+}
+
+.cardDestinos > div{
+    display: flex;
+}
+
+.tituloCardDestino{
+    justify-content: space-between;
+}
+
+.menuDestinos{
+    flex-direction: column;
+    border-style: solid;
+    border-width: 0px 2px 2px 2px;
+}
+
+.tituloMenuDestinos{
+    border-style: solid;
+    border-width: 2px 0 0 0;
+    justify-content: center;
+    background-color: var(--colorAuxiliar4);
+}
+
+.botonAgregarDestino{
+    display: flex;
+    border-radius: 10px 10px 0 0;
+    background-color: var(--colorAuxiliar4);
+    color: var(--colorAuxiliar3);
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fuenteSecundaria);
+    border-style: solid;
+    border-width: 2px 2px 0 2px;
+    border-color: var(--colorAuxiliar);
+    cursor: pointer;
+}

@@ -1,0 +1,20 @@
+.cardConfig{
+    display: flex;
+    background-color: var(--colorAuxiliar3);
+    font-size: 1rem;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.inputsConfig{
+    display: flex; 
+}
+
+.inputsConfig > label{
+    margin: 0 10px 0 10px;
+}
+
+.inputsConfig > select, input{
+    border-radius: 10px;
+    border-width: 2px;
+}

@@ -1,0 +1,86 @@
+<div class="containerHeaders">
+  <app-Header></app-Header>
+</div>
+
+<section *ngIf="user" class="containerPagina containerEnColumna containerHeaderSimple">
+  <h1 class="containerNombre">
+    <img src="../../../assets/Prueba.webp" />
+    <b data-testid="userNameTitle">{{user.nombre}}</b>
+  </h1>
+
+  <h2 class="subTitulo">
+    <p>Datos Personales</p>
+    <p>Alta:{{user.fechaDeAlta.toLocaleDateString()}} Antiguedad {{user.calcularAntiguedad()}} Año/s</p>
+  </h2>
+
+  <app-User-Data [user]="user" ></app-User-Data>
+
+  <app-Config_Demanding [isOn]="user.criterio.type == 'Exigente'" [user]="user"></app-Config_Demanding>
+
+  <div class="containerPreferencias">
+    <label>Preferencias de Vehiculo</label>
+
+    <div class="botonera">
+
+      <div *ngIf="user.getGustosType().includes('Neofilo'); else neofiloElse">
+        <app-User-Preference data-testid="neofiloButton" [text]="'Neofilo'" [isOn]="true" (click)="clickNeofiloPreference()" ></app-User-Preference>
+      </div>
+      <ng-template #neofiloElse>
+        <app-User-Preference data-testid="neofiloButton" [text]="'Neofilo'" (click)="clickNeofiloPreference()"></app-User-Preference>
+      </ng-template>
+
+      <div *ngIf="user.getGustosType().includes('Supersticioso'); else supersticiosoElse">
+        <app-User-Preference data-testid="supersticiosoButton" [text]="'Supersticioso'" [isOn]="true" (click)="clickSupersticiosoPreference()" ></app-User-Preference>
+      </div>
+      <ng-template #supersticiosoElse>
+        <app-User-Preference data-testid="supersticiosoButton" [text]="'Supersticioso'" (click)="clickSupersticiosoPreference()" ></app-User-Preference>
+      </ng-template>
+      
+      <div *ngIf="user.getGustosType().includes('Caprichoso'); else caprichosoElse">
+        <app-User-Preference data-testid="caprichosoButton" [text]="'Caprichoso'" [isOn]="true" (click)="clickCaprichosoPreference()" ></app-User-Preference>
+      </div>
+      <ng-template #caprichosoElse>
+        <app-User-Preference data-testid="caprichosoButton" [text]="'Caprichoso'" (click)="clickCaprichosoPreference()"></app-User-Preference>
+      </ng-template>
+
+      <div *ngIf="user.getGustosType().includes('Selectivo'); else selectivoElse">
+        <app-User-Preference data-testid="selectivoButton" [text]="'Selectivo'" [isOn]="true" (click)="clickSelectivoPreference()"></app-User-Preference>
+      </div>
+      <ng-template #selectivoElse>
+        <app-User-Preference data-testid="selectivoButton" [text]="'Selectivo'" (click)="clickSelectivoPreference()"></app-User-Preference>
+      </ng-template>
+
+      <div *ngIf="user.getGustosType().includes('SinLimite'); else sinLimiteElse">
+        <app-User-Preference data-testid="sinLimiteButton" [text]="'Sin Limite'" [isOn]="true" (click)="clickSinLimitePreference()" ></app-User-Preference>
+      </div>
+      <ng-template #sinLimiteElse>
+        <app-User-Preference data-testid="sinLimiteButton" [text]="'Sin Limite'" (click)="clickSinLimitePreference()"></app-User-Preference>
+      </ng-template>
+
+      <app-Car_Brand_Selector [isOn]="user.getGustosType().includes('Selectivo')" [user]="user" ></app-Car_Brand_Selector>
+      
+    </div>
+  </div>
+
+  <h2 class="subTitulo">
+    <p>Agenda</p>
+  </h2>
+
+  <div class="containerGrid">
+
+    <app-Profile-places [wanted] = "true" [destinationList]="user.destinosDeseados" ></app-Profile-places>
+
+    <app-Profile-places [wanted] = "false" [destinationList]="user.destinosVisitados"></app-Profile-places>
+
+    <app-Friends [friendList]="user.amigos" [user]="user"></app-Friends>
+
+  </div>
+
+  <div class="containerBotones">
+    <button class="boton botonAceptar-Cancelar" (click)="actualizarUsuario()"><b>Aceptar</b></button>
+    <button class="boton botonAceptar-Cancelar botonSecundario" (click)="cancelarActualizacion()"><b>Cancelar</b></button>
+  </div>
+
+</section>
+
+<app-Update_Card [isOn]="showUpdateCard" [text]="'el perfil'" ></app-Update_Card>

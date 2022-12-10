@@ -1,0 +1,5 @@
+export const LIMITE_CILINDRADAS = 250
+export const MUCHOS_DIAS_ALQUILER = 7
+export const DESCUENTO_CONVENIO = 0.1
+export const PAIS_LOCAL = "ARGENTINA"
+export const BONUS_POR_NO_SER_DESTINO_LOCAL = 0.2
